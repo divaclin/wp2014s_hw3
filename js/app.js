@@ -148,7 +148,7 @@
 				},error:function(object,err){
 				  }
 			});
-		};
+		}
 	};
 		
 		
