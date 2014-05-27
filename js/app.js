@@ -23,7 +23,7 @@
 		    }
 	        document.getElementById('logoutButton').addEventListener('click', function(){
 	          Parse.User.logOut();
-	          handlers.navbar();
+	          handler.navbar();
 	          window.location.hash = 'login/';
 	        });
 	    },
@@ -31,7 +31,7 @@
 	        
 	        
 			var postAction = function(){
-	          	handlers.navbar();
+	          	handler.navbar();
 	          	window.location.hash = (redirect) ? redirect : '';
 	        }
       
@@ -152,17 +152,17 @@
 		
 		}
 		//router related
-		var router = Parse.Router.extend({
+		var Router = Parse.Router.extend({
 			routes:{
 		    '':'index',
-		    'peer-evaluation': 'evaluation'
-			'login/*redirect':'login'
+		    'peer-evaluation': 'evaluation',
+			'login/*redirect':'login',
 			},
 			index:handler.evaluationView,
 			evaluation:handler.evaluationView,
-			login:handler.loginView
+			login:handler.loginView,
 		});
-	    this.Router = new router();
+	    this.Router = new Router();
 	    Parse.history.start();
 	    handler.navbar();
 	    
