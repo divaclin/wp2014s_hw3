@@ -145,12 +145,13 @@
 		              });
 
 		            }, false);					
-				},
-				error:function(object,err){
-				}
+				},error:function(object,err){
+				  }
 			});
+		});
+	};
 		
-		}
+		
 		//router related
 		var Router = Parse.Router.extend({
 			routes:{
