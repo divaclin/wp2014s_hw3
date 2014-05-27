@@ -29,7 +29,7 @@
 	    },
 		loginView:function(redirect){
 	        
-	        //layout??
+	        
 			var postAction = function(){
 	          	handlers.navbar();
 	          	window.location.hash = (redirect) ? redirect : '';
@@ -152,7 +152,7 @@
 		
 		}
 		//router related
-		var router = Parse.Router({
+		var router = Parse.Router.extend({
 			routes:{
 		    '':'index',
 		    'peer-evaluation': 'evaluation'
