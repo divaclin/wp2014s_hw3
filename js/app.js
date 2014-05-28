@@ -102,6 +102,7 @@
 			var Evaluation =Parse.Object.extend("Evaluation");
 			var query = new Parse.Query(Evaluation);
 	        var evaluationACL = new Parse.ACL();
+			console.log(typeof(currenterUser));
 	        evaluationACL.setPublicReadAccess(false);
 	        evaluationACL.setPublicWriteAccess(false);
 	        evaluationACL.setReadAccess(currentUser, true);
